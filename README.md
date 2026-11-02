@@ -1,16 +1,18 @@
 # SAP 报表插件（@gxx-labs/sap-reports-dsh）
 
-> **已发布到 npm：`@gxx-labs/sap-reports-dsh@0.0.1`**　源码：<https://github.com/gxx950224/sapbuddy-report-dsh>（本地开发目录包名为 `@local/sap-reports`）。
+> **npm 发布待定（尚未发布）。** 计划包名 `@gxx-labs/sap-reports-dsh`，备选 `sapbuddy-report-dsh`。源码：<https://github.com/gxx950224/sapbuddy-report-dsh>（本地开发目录包名为 `@local/sap-reports`）。
 
 DeepSeek Harness（DSH）插件：在左侧增加 **SAP 报表** 入口，经 SAP HTTPS 接口加载当前用户有权限的报表事务码，动态展示选择条件并查询 ALV 数据；同时向 Agent 提供 `sap_reports` 工具。插件本身不创建或修改任何 SAP 对象，也不自带 ABAP 代码。
 
 ## 安装
 
+npm 包尚未发布。目前请从本地路径安装：克隆本仓库（或下载 GitHub Release 中提供的 tgz，如有）后，通过 Harness 插件管理器安装该目录/文件，例如：
+
 ```sh
-dsh plugin --profile desktop add @gxx-labs/sap-reports-dsh@0.0.1
+dsh plugin --profile desktop add <path-to>/sapbuddy-report-dsh
 ```
 
-也可通过 Harness 插件管理器安装。包无第三方依赖、无安装脚本，使用 Harness 自带 React。
+npm 发布后将改为 `dsh plugin --profile desktop add <包名>@<版本>`。包无第三方依赖、无安装脚本，使用 Harness 自带 React。
 
 ## 连接页面（「SAP 报表」）
 
@@ -126,7 +128,7 @@ node --test test/*.test.js
 
 ## English summary
 
-**Published on npm as `@gxx-labs/sap-reports-dsh@0.0.1`** — install with `dsh plugin --profile desktop add @gxx-labs/sap-reports-dsh@0.0.1`. Source: https://github.com/gxx950224/sapbuddy-report-dsh
+**npm publication is pending (not yet published).** Planned name `@gxx-labs/sap-reports-dsh`, fallback `sapbuddy-report-dsh`. For now install from a local path (a clone of this repo, or a GitHub Release tgz when one is provided). Source: https://github.com/gxx950224/sapbuddy-report-dsh
 
 A DeepSeek Harness plugin that adds an **SAP Reports** sidebar page and the `sap_reports` agent tool (`status`, `list`, `meta`, `run`) for browsing the user's authorized SAP report catalog, reading selection metadata and fetching ALV rows through the `intfid` interface (`AI_RPT_CATALOG` / `AI_RPT_META` / `AI_RPT_RUN`, configured as `INTFMD='SYN'`). Values are strings (`YYYYMMDD`, `HHMMSS`, leading zeros kept); `max_rows` defaults to 5000, max 10000; `truncated:true` means only the returned rows were seen.
 
