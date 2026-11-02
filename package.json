@@ -18,7 +18,8 @@
     "locale/*.json",
     "icon.svg",
     "README.md",
-    "API.md"
+    "API.md",
+    "LICENSE"
   ],
   "scripts": {
     "test": "node --test test/*.test.js"
@@ -53,5 +54,6 @@
     "sap",
     "alv",
     "reports"
-  ]
+  ],
+  "license": "MIT"
 }
