@@ -1,0 +1,4 @@
+- insert:
+    - id: sap-reports
+      name: '@local/sap-reports'
+      config: {}

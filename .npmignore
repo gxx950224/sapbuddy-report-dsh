@@ -1,0 +1,26 @@
+# secrets / local state
+connection.json
+*credential*.json
+*secret*.json
+*.state.json
+*.cache.json
+.env
+.env*
+# logs / caches
+*.log
+logs/
+.cache/
+# build / pack
+node_modules/
+*.tgz
+*.map
+__snapshots__/
+test/fixtures/real/
+# backups
+*.bak
+*.bak*
+*.orig
+backups/
+# OS
+.DS_Store
+test/

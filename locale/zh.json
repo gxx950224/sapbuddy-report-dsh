@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "SAP 报表",
+    "description": "连接 SAP HTTPS 服务，浏览有权限的事务码，填写选择条件并查询 ALV 报表。"
+  }
+}

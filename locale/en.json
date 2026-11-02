@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "SAP Reports",
+    "description": "Connect to SAP over HTTPS, browse authorized transactions, fill selection criteria, and query ALV reports."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "@local/sap-reports",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Browse authorized SAP reports, fill selection screens, and inspect ALV results in DeepSeek Harness.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "service.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "API.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gxx950224/sapbuddy-report-dsh.git"
+  },
+  "homepage": "https://github.com/gxx950224/sapbuddy-report-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/gxx950224/sapbuddy-report-dsh/issues"
+  },
+  "author": "gxx950224",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "sap",
+    "alv",
+    "reports"
+  ]
+}
